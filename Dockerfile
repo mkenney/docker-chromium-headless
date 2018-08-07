@@ -10,6 +10,13 @@ ENV DEBIAN_FRONTEND=noninteractive \
 ARG CHROME_VERSION="google-chrome-stable"
 ARG CHROME_DRIVER_VERSION="latest"
 
+LABEL org.label-schema.schema-version = 1.0
+LABEL org.label-schema.vendor = bdlm@webbedlam.com
+LABEL org.label-schema.vcs-url = https://github.com/mkenney/docker-chromium-headless
+LABEL org.label-schema.description = "This image contains a Chromium headless installation in a Golang environment."
+LABEL org.label-schema.name = "docker-chromium-headless"
+LABEL org.label-schema.url = https://github.com/mkenney/docker-chromium-headless
+
 RUN set -x \
     # Basic .bashrc
     && echo 'alias ll="ls -laF"' >> /root/.bashrc \
